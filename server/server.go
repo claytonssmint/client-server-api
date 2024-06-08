@@ -8,6 +8,8 @@ import (
 	"log"
 	"net/http"
 	"time"
+
+	_ "github.com/mattn/go-sqlite3"
 )
 
 const (
@@ -15,7 +17,7 @@ const (
 	dbName          = "cotacoes.db"
 	apiTimeout      = 200 * time.Millisecond
 	dbTimeout       = 10 * time.Millisecond
-	httpServerPort  = "8080"
+	httpServerPort  = ":8080"
 	httpServerRoute = "/cotacao"
 )
 
